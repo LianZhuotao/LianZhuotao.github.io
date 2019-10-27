@@ -16,7 +16,7 @@
     <meta name="keywords" content="连卓涛">
 
 
-<title>解决 Hexo 自定义域名失效的问题(即使已添加 CNAME） | 连卓涛的博客</title>
+<title>解决 Hexo 部署 Github Pages 自定义域名失效的问题(即使已添加 CNAME） | 连卓涛的博客</title>
 
 
 
@@ -112,11 +112,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">解决 Hexo 自定义域名失效的问题(即使已添加 CNAME）</h1>
+            <h1 class="post-title">解决 Hexo 部署 Github Pages 自定义域名失效的问题(即使已添加 CNAME）</h1>
             
                 <div class="post-meta">
                     
@@ -141,7 +203,34 @@
         </header>
 
         <div class="post-content">
-            
+            <h1 id="Hexo-部署到-Github-Pages-自定义域名失效解决方案"><a href="#Hexo-部署到-Github-Pages-自定义域名失效解决方案" class="headerlink" title="Hexo 部署到 Github Pages 自定义域名失效解决方案"></a>Hexo 部署到 Github Pages 自定义域名失效解决方案</h1><blockquote>
+<p>当你自定义 Github Pages 域名时，是否出现了每次hexo deploy，自定义域名都失效的问题呢？以下分两种情况讨论。</p>
+</blockquote>
+<hr>
+<h2 id="情形1：未添加-CNAME"><a href="#情形1：未添加-CNAME" class="headerlink" title="情形1：未添加 CNAME"></a>情形1：未添加 CNAME</h2><h4 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a><strong>解决方案：</strong></h4><ol>
+<li><p>找到 <strong>hexo</strong> 博客根目录下的 <strong>source</strong> 文件夹。注意，不是主题的 source 文件夹。当 hexo 生成静态页面时，根目录下的 source 文件夹中的内容，就会在生成的网页根目录中（你可以在部署到github后，在仓库中查看，此时本地根目录下source文件夹的内容就在仓库的根目下）。<br><img src="https://img-blog.csdnimg.cn/20191027225320969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+<li><p>新建一个文件，名为 CNAME ，内容为你的域名（不包括www.或http等等）。如图：<br><img src="https://img-blog.csdnimg.cn/20191027224719740.png" alt="在这里插入图片描述"><br><strong>注意：</strong><br>——- 名为 CNAME，全部大写，没有后缀。<br>——- 内容只包含一个域名，且不含 www. 或 http 等。<br>——- 放到根目录下的source文件夹中。</p>
+</li>
+<li><p>hexo g -d</p>
+<p>执行完毕后登陆github，找到仓库，settings，查看域名是否已经更改，或者直接用域名尝试访问。<img src="https://img-blog.csdnimg.cn/20191027230347212.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+<hr>
+
+<h2 id="情形2：已添加-CNAME"><a href="#情形2：已添加-CNAME" class="headerlink" title="情形2：已添加 CNAME"></a>情形2：已添加 CNAME</h2><h4 id="解决方案：-1"><a href="#解决方案：-1" class="headerlink" title="解决方案："></a><strong>解决方案：</strong></h4><ol>
+<li>首先进入github仓库查看 CNAME是否出现在根目录中，如图所示：<br><img src="https://img-blog.csdnimg.cn/20191027230041540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>若没有，则请返回第一种情况，认真检查自己的 CNAME 的路径是否正确。</li>
+</ol>
+<p>2.若仓库根目录存在 CNAME 文件，请按照以下步骤检查：<br> ——- 情形1步骤2中的注意点，是否都符合要求？<br> ——- <strong><em>若感觉符合要求！！！请你务必注意你的文件后缀！！！</em></strong></p>
+<blockquote>
+<p>首先看你的电脑是不是把后缀自动隐藏了，虽然你命名时，只输入了CNAME，但是它有可能会自动生成一个后缀，且隐藏。假如你用 mac，用文本编辑，命名为CNAME 保存后，有可能会自动加上后缀，但是 mac又很鬼畜的把后缀给隐藏了！！<img src="https://img-blog.csdnimg.cn/20191027231302285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>一定要注意！！保存时留意一下格式。</p>
+</blockquote>
+<blockquote>
+<p>其次，如果你发现你文件格式不对，不要直接把它的后缀去掉，有可能会出错。<br><img src="https://img-blog.csdnimg.cn/201910272316182.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如果这样直接修改，表面上是满足要求了，但仍可能出错。<br><img src="https://img-blog.csdnimg.cn/20191027231718599.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>因为它会认为你的文件已经损坏了，所以你应该重新建好一个 CNAME 无后缀文件，并将其替代。至此问题解决。</p>
+</blockquote>
+<hr>
+
+<h3 id="以上基本是我遇到的问题和解决方法，尤其是最后这个隐藏后缀以及直接删除后缀，困扰了我好几个小时。希望能给像我一样的新人一点帮助！"><a href="#以上基本是我遇到的问题和解决方法，尤其是最后这个隐藏后缀以及直接删除后缀，困扰了我好几个小时。希望能给像我一样的新人一点帮助！" class="headerlink" title="以上基本是我遇到的问题和解决方法，尤其是最后这个隐藏后缀以及直接删除后缀，困扰了我好几个小时。希望能给像我一样的新人一点帮助！"></a>以上基本是我遇到的问题和解决方法，尤其是最后这个隐藏后缀以及直接删除后缀，困扰了我好几个小时。希望能给像我一样的新人一点帮助！</h3>
         </div>
 
         
