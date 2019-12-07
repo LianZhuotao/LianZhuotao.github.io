@@ -16,7 +16,7 @@
     <meta name="keywords" content="连卓涛">
 
 
-<title>解决 Hexo 部署 Github Pages 自定义域名失效的问题(即使已添加 CNAME） | 连卓涛的博客</title>
+<title>用 Gurobi 解决 MinMax 问题时遇到的坑 | 连卓涛的博客</title>
 
 
 
@@ -178,7 +178,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">解决 Hexo 部署 Github Pages 自定义域名失效的问题(即使已添加 CNAME）</h1>
+            <h1 class="post-title">用 Gurobi 解决 MinMax 问题时遇到的坑</h1>
             
                 <div class="post-meta">
                     
@@ -187,14 +187,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">October 27, 2019&nbsp;&nbsp;21:02:26</a>
+                        Date: <a href="#">December 7, 2019&nbsp;&nbsp;16:45:58</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Web-前端/">Web 前端</a>
+                                <a href="/categories/机器学习与优化/">机器学习与优化</a>
                             
                         </span>
                     
@@ -206,25 +206,27 @@
         </header>
 
         <div class="post-content">
-            <p>当你自定义 Github Pages 域名时，是否出现了每次hexo deploy，自定义域名都失效的问题呢？以下分两种情况讨论。</p>
-<h2 id="情形1：未添加-CNAME"><a href="#情形1：未添加-CNAME" class="headerlink" title="情形1：未添加 CNAME"></a>情形1：未添加 CNAME</h2><h4 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a><strong>解决方案：</strong></h4><ol>
-<li><p>找到 <strong>hexo</strong> 博客根目录下的 <strong>source</strong> 文件夹。注意，不是主题的 source 文件夹。当 hexo 生成静态页面时，根目录下的 source 文件夹中的内容，就会在生成的网页根目录中（你可以在部署到github后，在仓库中查看，此时本地根目录下source文件夹的内容就在仓库的根目下）。<br><img src="https://img-blog.csdnimg.cn/20191027225320969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-<li><p>新建一个文件，名为 CNAME ，内容为你的域名（不包括www.或http等等）。如图：<br><img src="https://img-blog.csdnimg.cn/20191027224719740.png" alt="在这里插入图片描述"><br><strong>注意：</strong><br>——- 名为 CNAME，全部大写，没有后缀。<br>——- 内容只包含一个域名，且不含 www. 或 http 等。<br>——- 放到根目录下的source文件夹中。</p>
-</li>
-<li><p>hexo g -d</p>
-<p>执行完毕后登陆github，找到仓库，settings，查看域名是否已经更改，或者直接用域名尝试访问。<img src="https://img-blog.csdnimg.cn/20191027230347212.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-</ol>
-<h2 id="情形2：已添加-CNAME"><a href="#情形2：已添加-CNAME" class="headerlink" title="情形2：已添加 CNAME"></a>情形2：已添加 CNAME</h2><h4 id="解决方案：-1"><a href="#解决方案：-1" class="headerlink" title="解决方案："></a><strong>解决方案：</strong></h4><ol>
-<li>首先进入github仓库查看 CNAME是否出现在根目录中，如图所示：<br><img src="https://img-blog.csdnimg.cn/20191027230041540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>若没有，则请返回第一种情况，认真检查自己的 CNAME 的路径是否正确。</li>
-</ol>
-<p>2.若仓库根目录存在 CNAME 文件，请按照以下步骤检查：<br> ——- 情形1步骤2中的注意点，是否都符合要求？<br> ——- <strong><em>若感觉符合要求！！！请你务必注意你的文件后缀！！！</em></strong></p>
-<p>首先看你的电脑是不是把后缀自动隐藏了，虽然你命名时，只输入了CNAME，但是它有可能会自动生成一个后缀，且隐藏。假如你用 mac，用文本编辑，命名为CNAME 保存后，有可能会自动加上后缀，但是 mac又很鬼畜的把后缀给隐藏了！！<img src="https://img-blog.csdnimg.cn/20191027231302285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>一定要注意！！保存时留意一下格式。</p>
-<p>其次，如果你发现你文件格式不对，不要直接把它的后缀去掉，有可能会出错。<br><img src="https://img-blog.csdnimg.cn/201910272316182.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如果这样直接修改，表面上是满足要求了，但仍可能出错。<br><img src="https://img-blog.csdnimg.cn/20191027231718599.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc0NzUyOA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>因为它会认为你的文件已经损坏了，所以你应该重新建好一个 CNAME 无后缀文件，并将其替代。至此问题解决。</p>
+            <p>两句话介绍下</p>
 <hr>
-<p><strong>写在最后：</strong></p>
-<p>以上基本是我遇到的问题和解决方法，尤其是最后这个隐藏后缀以及直接删除后缀，困扰了我好几个小时。希望能给像我一样的新人一点帮助！</p>
+<h2 id="一、XXXX"><a href="#一、XXXX" class="headerlink" title="一、XXXX"></a>一、XXXX</h2><h2 id="二、XXXX"><a href="#二、XXXX" class="headerlink" title="二、XXXX"></a>二、XXXX</h2><h2 id="三、xx"><a href="#三、xx" class="headerlink" title="三、xx"></a>三、xx</h2><ol>
+<li>XXXX</li>
+</ol>
+<ol start="2">
+<li><p>XXXX</p>
+<p><strong><strong>XX：</strong></strong> </p>
+<p><strong><strong>XX：</strong></strong> </p>
+</li>
+<li><p>XXXX</p>
+</li>
+</ol>
+<br>
+
+
+
+<p>-–</p>
+<p>参考：</p>
+<p><strong><strong>写在最后：</strong></strong></p>
+<p>以上是我的学习记录，希望能给像我一样的新人一点帮助！</p>
 <p>这是<a href="mailto:lianzhuotao@sina.com" target="_blank" rel="noopener">我的邮箱</a>，欢迎交流学习。</p>
 
         </div>
@@ -240,7 +242,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://www.lianzhuotao.com/2019/10/27/解决Hexo每次部署后域名被替换（即使添加了CNAME）的问题/">http://www.lianzhuotao.com/2019/10/27/解决Hexo每次部署后域名被替换（即使添加了CNAME）的问题/</a></span>
+                        <span><a href="http://www.lianzhuotao.com/2019/12/07/用-Gurobi-解决-MinMax-问题时遇到的坑/">http://www.lianzhuotao.com/2019/12/07/用-Gurobi-解决-MinMax-问题时遇到的坑/</a></span>
                     </p>
                 
                 
@@ -264,7 +266,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/Hexo/"># Hexo</a>
+                        <a href="/tags/Gurobi/"># Gurobi</a>
                     
                         
                 </span>
@@ -277,10 +279,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2019/12/06/什么是-P、NP、NP-Hard、NP-Complete-问题/">什么是 P、NP、NP-Hard、NP-Complete 问题</a>
             
-            
-            <a class="next" rel="next" href="/2019/10/06/【译文】用7行JSON代码将你的网页变成移动应用/">【译文】用7行 JSON 代码将你的网页变成移动应用</a>
+            <a class="next" rel="next" href="/2019/12/07/测试模板/">测试模板</a>
             
         </section>
 
