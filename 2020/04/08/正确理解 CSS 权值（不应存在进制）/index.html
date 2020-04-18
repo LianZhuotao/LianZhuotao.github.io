@@ -281,14 +281,14 @@
 <h4 id="BUT！你可以发现，在张鑫旭的这篇博客中（2012-年-08-月-20-日），256-个类选择器确实干掉了一个-id-选择器！那也就是说，进制的说法至少在当时是有据可依的。那具体是为什么呢？结合我搜索到的资料，简单的“猜想”一下。"><a href="#BUT！你可以发现，在张鑫旭的这篇博客中（2012-年-08-月-20-日），256-个类选择器确实干掉了一个-id-选择器！那也就是说，进制的说法至少在当时是有据可依的。那具体是为什么呢？结合我搜索到的资料，简单的“猜想”一下。" class="headerlink" title="BUT！你可以发现，在张鑫旭的这篇博客中（2012 年 08 月 20 日），256 个类选择器确实干掉了一个 id 选择器！那也就是说，进制的说法至少在当时是有据可依的。那具体是为什么呢？结合我搜索到的资料，简单的“猜想”一下。"></a>BUT！你可以发现，在张鑫旭的<a href="https://www.zhangxinxu.com/wordpress/2012/08/256-class-selector-beat-id-selector/" target="_blank" rel="noopener">这篇博客</a>中（2012 年 08 月 20 日），256 个类选择器确实干掉了一个 id 选择器！那也就是说，进制的说法至少在当时是有据可依的。那具体是为什么呢？结合我搜索到的资料，简单的“猜想”一下。</h4><h3 id="2-2-为什么会有进制的说法？"><a href="#2-2-为什么会有进制的说法？" class="headerlink" title="2.2 为什么会有进制的说法？"></a>2.2 为什么会有进制的说法？</h3><p>通过张鑫旭博客，我们可以看到，在当时，确实 256 个类选择器干掉了一个 id 选择器。</p>
 <p>在<a href="https://www.zhangxinxu.com/wordpress/2012/08/256-class-selector-beat-id-selector/" target="_blank" rel="noopener">这篇博客</a>中，他提到了：</p>
 <blockquote>
-<p>据说，查看FireFox浏览器的<a href="http://hg.mozilla.org/mozilla-central/file/tip/layout/style/StyleRule.cpp#l479" target="_blank" rel="noopener">源代码</a>，发现，所有的类名(classes)都是以<strong>8字节数据类型</strong>存储的。对字节稍稍了解的人都知道，8字节所能hold的最大值就是255. 所以你想啊，当同时出现256个class, 势必会越过其边缘，溢出到id区域。</p>
+<p>据说，查看FireFox浏览器的<a href="http://hg.mozilla.org/mozilla-central/file/tip/layout/style/StyleRule.cpp#l479" target="_blank" rel="noopener">源代码</a>，发现，所有的类名(classes)都是以<strong>8c比特数据类型</strong>存储的。对比特稍稍了解的人都知道，8比特所能hold的最大值就是255. 所以你想啊，当同时出现256个class, 势必会越过其边缘，溢出到id区域。</p>
 <blockquote>
 <p>Gecko overflows the count of classes into the count of IDs, each of which holds 8 bits.</p>
 <p>— Cameron McCormack (@heycam) August 16, 2012</p>
 </blockquote>
 </blockquote>
 <blockquote>
-<p>根据一个Opera员工的信息，Opera浏览器class类名是以<strong>16字节数据类型</strong>存储的。因此，该浏览器要想发生class溢出到id的话，需要连续65536个class. 也不知道是不是因为16字节字符串比8自己的更影响选择器引擎</p>
+<p>根据一个Opera员工的信息，Opera浏览器class类名是以<strong>16比特数据类型</strong>存储的。因此，该浏览器要想发生class溢出到id的话，需要连续65536个class. 也不知道是不是因为16比特字符串比8自己的更影响选择器引擎</p>
 <blockquote>
 <p>yes, opera uses 16 bits instead of 8. bring on 65536 classes…</p>
 <p>— patrick h. lauke (@patrick_h_lauke) August 16, 2012</p>
