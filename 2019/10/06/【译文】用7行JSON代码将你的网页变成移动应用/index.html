@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang>
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="">
+<head>
     <meta charset="UTF-8">
-<meta name="baidu-site-verification" content="9VaSvcOcKP">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="baidu-site-verification" content="9VaSvcOcKP" />
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <meta name="author" content="连卓涛">
@@ -47,7 +48,7 @@
     
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 <body>
     <div class="wrapper">
         <header>
@@ -190,13 +191,13 @@
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Web-前端/">Web 前端</a>
+                                <a href="/categories/Web-%E5%89%8D%E7%AB%AF/">Web 前端</a>
                             
                         </span>
                     
                     <span id="busuanzi_container_page_pv">
-    &nbsp&nbsp&nbsp&nbsp<本文总阅读量<span id="busuanzi_value_page_pv"></本文总阅读量<span></span>次>
-
+    &nbsp&nbsp&nbsp&nbsp<本文总阅读量<span id="busuanzi_value_page_pv"></span>次>
+</span>
                 </div>
             
         </header>
@@ -204,7 +205,7 @@
         <div class="post-content">
             <blockquote>
 <ul>
-<li>原文地址：<a href="https://www.freecodecamp.org/news/how-to-turn-your-website-into-a-mobile-app-with-7-lines-of-json-631c9c9895f5/" target="_blank" rel="noopener">How to Turn Your Website into a Mobile App with 7 Lines of JSON</a></li>
+<li>原文地址：<a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/how-to-turn-your-website-into-a-mobile-app-with-7-lines-of-json-631c9c9895f5/">How to Turn Your Website into a Mobile App with 7 Lines of JSON</a></li>
 <li>原文作者：Ethan</li>
 <li>译者：Zhuotao Lian</li>
 <li>校对者：Miya</li>
@@ -214,12 +215,12 @@
 <h4 id="一种将-web-引擎与应用程序融合的新方法"><a href="#一种将-web-引擎与应用程序融合的新方法" class="headerlink" title="一种将 web 引擎与应用程序融合的新方法"></a>一种将 web 引擎与应用程序融合的新方法</h4><p>如果我告诉你<strong>上面7行橙色的 JSON 代码</strong>就能将网站变成移动应用，你怎么看？不需要使用框架 API 重写你的网站就能让它像移动应用一样呈现。就让你现有的网站保持原样，利用简单的 URL 引用将其打包成原生应用即可。</p>
 <p>倘若如上，你只需略微调整 JSON 代码，就可以访问所有的原生 API，原生 UI 组件以及实现原生视图转换。</p>
 <p>下面是一个最简单的范例：</p>
-<p><img src="https://cdn-media-1.freecodecamp.org/images/1kjzo4uXso3Yk08RYYUUYGK6HXrlCs42aXqG" alt></p>
-<p>你可以发现我嵌入了一个<a href="https://github.com/Jasonette" target="_blank" rel="noopener"> github.com 网页</a>，但其余布局都是本地 UI 组件，就像<a href="https://docs.jasonette.com/document/#bodyheader" target="_blank" rel="noopener">导航栏</a>和<a href="https://docs.jasonette.com/document/#tabs" target="_blank" rel="noopener">底部标签栏</a>。并且原生切换效果是自动生成的，你无需使用任何 API 重写网站。</p>
+<p><img src="https://cdn-media-1.freecodecamp.org/images/1kjzo4uXso3Yk08RYYUUYGK6HXrlCs42aXqG"></p>
+<p>你可以发现我嵌入了一个<a target="_blank" rel="noopener" href="https://github.com/Jasonette"> github.com 网页</a>，但其余布局都是本地 UI 组件，就像<a target="_blank" rel="noopener" href="https://docs.jasonette.com/document/#bodyheader">导航栏</a>和<a target="_blank" rel="noopener" href="https://docs.jasonette.com/document/#tabs">底部标签栏</a>。并且原生切换效果是自动生成的，你无需使用任何 API 重写网站。</p>
 <p>你可能迫切地想问：”这很酷，但除了在原生应用框架中显示网页，你还能做其他有意义的事吗？“</p>
 <p>问得好！因为这就是本篇文章的主题。你只需要创建一个<strong>在 Web 视图和应用程序之间的双向通信信道</strong>，这样父应用就可以触发 Web 视图内的任何 JavaScript 函数，并且 Web 视图可以从外部调用原生 API。</p>
 <p>这有个简单的例子：</p>
-<p><img src="https://cdn-media-1.freecodecamp.org/images/8AvgutqafADVJW2WYgH3o0kBVDZvVuUIoU6C" alt></p>
+<p><img src="https://cdn-media-1.freecodecamp.org/images/8AvgutqafADVJW2WYgH3o0kBVDZvVuUIoU6C"></p>
 <p>请注意，此视图包含：</p>
 <p>1.原生导航栏，包括内置的切换功能。</p>
 <p>2.一个 Web 视图，其中嵌入了 Web 应用程序：二维码生成器。</p>
@@ -231,12 +232,12 @@
 <p>人们觉得<code>原生</code>和<code>HTML</code>是不能共存的，更不会认为它们能相辅相成，甚至实现看似不可能的功能。</p>
 <p>在本文中，我将阐述：</p>
 <ul>
-<li>为什么将 Web 引擎和原生组件相融合通常是一个好主意。</li>
-<li>为什么 HTML 和原生的无缝融合很困难，以及如何实现。</li>
-<li>更重要的是，你如何利用它来快速构建你自己的应用程序。</li>
+<li>  为什么将 Web 引擎和原生组件相融合通常是一个好主意。</li>
+<li>  为什么 HTML 和原生的无缝融合很困难，以及如何实现。</li>
+<li>  更重要的是，你如何利用它来快速构建你自己的应用程序。</li>
 </ul>
 <h3 id="为什么要在原生应用中使用-HTML-？"><a href="#为什么要在原生应用中使用-HTML-？" class="headerlink" title="为什么要在原生应用中使用 HTML ？"></a>为什么要在原生应用中使用 HTML ？</h3><p>在进一步探讨之前，让我们首先讨论一下这个主意是好是坏，以及在何时你会想采用这种方法。这儿给出一些潜在的使用案例：</p>
-<h4 id="1-使用-Web-原生功能"><a href="#1-使用-Web-原生功能" class="headerlink" title="1. 使用 Web 原生功能"></a>1. 使用 Web 原生功能</h4><p>你的应用的某些部分可能更适合用 Web 引擎实现。 例如，<a href="https://en.wikipedia.org/wiki/WebSocket" target="_blank" rel="noopener">Websocket</a> 是一个为 Web 环境设计的原生 Web 功能。在这种情况下，安装本质上  <strong>“模拟”</strong>  Websocket 的第三方库，就不如使用内置的 Web 引擎（ <strong>iOS 版的   WKWebView</strong>  和 <strong>Android 版的 WebView</strong>）。 </p>
+<h4 id="1-使用-Web-原生功能"><a href="#1-使用-Web-原生功能" class="headerlink" title="1. 使用 Web 原生功能"></a>1. 使用 Web 原生功能</h4><p>你的应用的某些部分可能更适合用 Web 引擎实现。 例如，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/WebSocket">Websocket</a> 是一个为 Web 环境设计的原生 Web 功能。在这种情况下，安装本质上  <strong>“模拟”</strong>  Websocket 的第三方库，就不如使用内置的 Web 引擎（ <strong>iOS 版的   WKWebView</strong>  和 <strong>Android 版的 WebView</strong>）。 </p>
 <p>无需安装额外的代码，你就可以免费实现。这也引出了下一点。</p>
 <h4 id="2-避免较大的二进制文件"><a href="#2-避免较大的二进制文件" class="headerlink" title="2. 避免较大的二进制文件"></a>2. 避免较大的二进制文件</h4><p>你可能想快速使用一些功能，但它们需要一个庞大的第三方库。</p>
 <p>比如，为了以原生方式实现一个二维码生成器，你可能需要安装某些第三方库，而它们将大大增加文件的体积。但如果你使用 Web 视图引擎以及通过一个简单的<code>&lt;script src&gt;</code>来调用 javascript 库，你就能免费获得这些功能，且不需要安装任何第三方原生库。</p>
@@ -248,52 +249,52 @@
 <h3 id="它是如何实现的"><a href="#它是如何实现的" class="headerlink" title="它是如何实现的?"></a>它是如何实现的?</h3><h4 id="A-Jasonette"><a href="#A-Jasonette" class="headerlink" title="A. Jasonette"></a>A. Jasonette</h4><p>Jasonette 是一种开源的，基于标记的用于构建跨平台原生应用的方法。</p>
 <p>它就像一个 Web 浏览器，但它不是将 HTML 标记语言解释为网页，而是将 JSON 标记语言解释为 IOS 或 Android 端的原生应用。</p>
 <p>就像所有的 Web 浏览器都有完全相同的代码，却可以通过按需解释各种 HTML 标记来为你提供各种不同的 Web 应用程序一样，所有 Jasonette 应用程序都有完全相同的二进制文件，它按需解释各种 JSON  标记来创建你的应用。开发人员不需要接触代码。相反，你可以通过编写标记来构建应用程序，该标记可以实时转换为原生应用程序。</p>
-<p>你可以在 <a href="https://medium.freecodecamp.org/how-to-build-cross-platform-mobile-apps-using-nothing-more-than-a-json-markup-f493abec1873" target="_blank" rel="noopener">这里</a>进一步学习 Jasonette。 </p>
+<p>你可以在 <a target="_blank" rel="noopener" href="https://medium.freecodecamp.org/how-to-build-cross-platform-mobile-apps-using-nothing-more-than-a-json-markup-f493abec1873">这里</a>进一步学习 Jasonette。 </p>
 <p>虽然 Jasonette 的核心是构建原生应用程序，但本文旨在介绍如何将 HTML 集成到核心原生引擎中，接下来就让我们进一步探讨。</p>
 <h4 id="B-Jasonette-Web-容器"><a href="#B-Jasonette-Web-容器" class="headerlink" title="B. Jasonette Web 容器"></a>B. Jasonette Web 容器</h4><p>原生应用很棒，但有时我们需要使用 Web 功能。</p>
 <p>将 Web 视图集成到原生应用中是一项复杂的工作。无缝集成需要：</p>
 <ol>
-<li><strong>Web 视图应该被集成为原生应用布局的一部分：</strong> Web 视图应该像其他原生 UI 组件一样，作为原生布局的一部分融入应用，否则会让用户感到笨拙，就像在访问一个真的网站一样。</li>
-<li><strong>父应用可以控制子 Web 容器：</strong> 父应用应当可以轻松地控制子 Web 视图。</li>
-<li><strong>子 Web 容器可以触发父应用的原生事件：</strong> 子应用应当可以触发父应用事件从而运行原生 API。</li>
+<li> <strong>Web 视图应该被集成为原生应用布局的一部分：</strong> Web 视图应该像其他原生 UI 组件一样，作为原生布局的一部分融入应用，否则会让用户感到笨拙，就像在访问一个真的网站一样。</li>
+<li> <strong>父应用可以控制子 Web 容器：</strong> 父应用应当可以轻松地控制子 Web 视图。</li>
+<li> <strong>子 Web 容器可以触发父应用的原生事件：</strong> 子应用应当可以触发父应用事件从而运行原生 API。</li>
 </ol>
 <p>这有许多工作要做，所以我首先介绍第一部分： ——  <strong>简单地将 Web 容器嵌入原生布局中</strong>  ——并将其作为版本1发布： </p>
-<p><a href="http://jasonette.com/webcontainer/" target="_blank" rel="noopener"><strong>JSON Web 容器</strong></a><br><a href="http://jasonette.com/webcontainer/" target="_blank" rel="noopener">_JSON 中的 HTML 变成了原生应用中的组件_jasonette.com</a></p>
+<p><a target="_blank" rel="noopener" href="http://jasonette.com/webcontainer/"><strong>JSON Web 容器</strong></a><br><a target="_blank" rel="noopener" href="http://jasonette.com/webcontainer/">_JSON 中的 HTML 变成了原生应用中的组件_jasonette.com</a></p>
 <p>这已经非常实用了，但由于其不可交互性，仍然存在一些限制。</p>
 <p>父应用无法控制子 Web 容器，子应用无法将任何事件通知父应用，这使得 Web 容器完全独立于外部世界。</p>
 <h4 id="C-Jasonette-Web-容器-2-0：使其可交互"><a href="#C-Jasonette-Web-容器-2-0：使其可交互" class="headerlink" title="C. Jasonette Web 容器 2.0：使其可交互"></a>C. Jasonette Web 容器 2.0：使其可交互</h4><p>在发布了版本1之后，我进行了第二部分的实验。——  <strong>使 Web 容器变得可交互</strong></p>
 <p>下文将解释添加的解决方案，这些解决方案使得过去的静态 Web 容器变得可交互，并显著增强了它们的功能。</p>
-<h3 id="实现：交互式-Web-容器"><a href="#实现：交互式-Web-容器" class="headerlink" title="实现：交互式 Web 容器"></a>实现：交互式 Web 容器</h3><h4 id="1-通过-URL-加载"><a href="#1-通过-URL-加载" class="headerlink" title="1. 通过 URL 加载"></a><strong>1. 通过 URL 加载</strong></h4><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>先前在版本1中，想要将 Web 容器用作后台视图组件，你必须要首先 <a href="https://jasonette.com/webcontainer/" target="_blank" rel="noopener">将<code>$jason.body.background.type</code>设置为<code>&quot;html&quot;</code>然后在 <code>$jason.body.background.text</code>属性下硬编码 HTML 文本 </a>，如下所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      ...    &#125;,    &quot;body&quot;: &#123;      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;text&quot;: &quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello World&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实现：交互式-Web-容器"><a href="#实现：交互式-Web-容器" class="headerlink" title="实现：交互式 Web 容器"></a>实现：交互式 Web 容器</h3><h4 id="1-通过-URL-加载"><a href="#1-通过-URL-加载" class="headerlink" title="1. 通过 URL 加载"></a><strong>1. 通过 URL 加载</strong></h4><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>先前在版本1中，想要将 Web 容器用作后台视图组件，你必须要首先 <a target="_blank" rel="noopener" href="https://jasonette.com/webcontainer/">将<code>$jason.body.background.type</code>设置为<code>&quot;html&quot;</code>然后在 <code>$jason.body.background.text</code>属性下硬编码 HTML 文本 </a>，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      ...    &#125;,    &quot;body&quot;: &#123;      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;text&quot;: &quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello World&lt;&#x2F;h1&gt;&lt;&#x2F;body&gt;&lt;&#x2F;html&gt;&quot;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>当然，人们希望能使用一个简单的 Web URL 来实例化容器，而不是在一行中硬编码整个 HTML 文本。</p>
 <h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>Web 容器2.0已经添加了<code>url</code>属性。 你可以像这样嵌入本地<code>file://</code>HTML（它加载自应用程序附带的本地 HTML 文件）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      ...    &#125;,    &quot;body&quot;: &#123;      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;url&quot;: &quot;file://index.html&quot;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      ...    &#125;,    &quot;body&quot;: &#123;      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;url&quot;: &quot;file:&#x2F;&#x2F;index.html&quot;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>或像这样嵌入一个远程的<code>http[s]://</code>URL（它加载自远程 HTML 文件）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      ...    &#125;,    &quot;body&quot;: &#123;      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;url&quot;: &quot;https://news.ycombinator.com&quot;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      ...    &#125;,    &quot;body&quot;: &#123;      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;url&quot;: &quot;https:&#x2F;&#x2F;news.ycombinator.com&quot;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="2-父应用-lt-gt-Web-容器双向通信"><a href="#2-父应用-lt-gt-Web-容器双向通信" class="headerlink" title="2. 父应用 &lt;=&gt; Web 容器双向通信"></a><strong>2. 父应用 &lt;=&gt; Web 容器双向通信</strong></h4><h4 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h4><p>此前，Web容器只用于显示内容，而非可交互的。这意味着 <strong>以下任一项都不可能实现：</strong></p>
 <ol>
-<li><strong>Jasonette =&gt; Web 容器</strong>: 从 Jasonette 调用 Web 容器内的 JavaScript 函数。</li>
-<li><strong>Web 容器 =&gt; Jasonette</strong>: 从 Web 容器代码调用原生 API。</li>
+<li> <strong>Jasonette =&gt; Web 容器</strong>: 从 Jasonette 调用 Web 容器内的 JavaScript 函数。</li>
+<li> <strong>Web 容器 =&gt; Jasonette</strong>: 从 Web 容器代码调用原生 API。</li>
 </ol>
 <p>你所能做的就是显示 Web 容器的内容。这就像你将 iframe 框架嵌入了网页中，但主网页无法访问 iframe 框架中的内容。</p>
 <h4 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h4><p>Jasonette 的重点是设计一种标准的标记语言来描述跨平台的移动应用程序。因此，我们需要它能够全面描述父应用与子 Web 容器间的通信。 </p>
 <p>为了实现这一点，我在父应用和子 Web 容器之间设计了一个基于<code>[JSON-RPC][9]</code>的通信信道。由于 Jasonette 上的所有内容都是用 JSON 对象表示的，所以使用 JSON-RPC 标准格式作为通信协议是非常有意义的。</p>
-<p><img src="https://cdn-media-1.freecodecamp.org/images/dISqZspArHgei6hasHQ89nw7g1GrWSsyPG8s" alt></p>
+<p><img src="https://cdn-media-1.freecodecamp.org/images/dISqZspArHgei6hasHQ89nw7g1GrWSsyPG8s"></p>
 <p>为了对 Web 容器能进行 JavaScript 函数调用我们声明了一个名为<code>$agent.request</code>的操作：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;type&quot;: &quot;$agent.request&quot;,  &quot;options&quot;: &#123;    &quot;id&quot;: &quot;$webcontainer&quot;,    &quot;method&quot;: &quot;login&quot;,    &quot;params&quot;: [&quot;username&quot;, &quot;password&quot;]  &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <p><code>[$agent.request][10]</code>是触发 JSON-RPC 请求并发送到 Web 容器中的原生 API。要使用它，我们必须传递一个<code>options</code>对象作为其参数。</p>
-<p> <code>options</code>对象是将被发送到 Web 容器的实际<a href="http://www.jsonrpc.org/specification#conventions" target="_blank" rel="noopener"> JSON-RPC 请求</a> 。让我们看看各个属性的含义：</p>
+<p> <code>options</code>对象是将被发送到 Web 容器的实际<a target="_blank" rel="noopener" href="http://www.jsonrpc.org/specification#conventions"> JSON-RPC 请求</a> 。让我们看看各个属性的含义：</p>
 <ul>
-<li><code>id</code>: Web 容器构建在一个名为  <a href="https://jasonette.com/agent/" target="_blank" rel="noopener">Agent</a> 的底层架构之上。通常，一个视图可以有多个 Agent，每个 Agent 都有其唯一的ID。但是 <a href="https://docs.jasonette.com/web/#1-background-web-container-is-an-agent" target="_blank" rel="noopener"> Web 容器是一种特殊的 Agent，他只能使用<code>$webcontainer</code>作为 ID</a>, 因此我们在这里使用这个 ID。</li>
-<li><code>method</code>: 要调用的 JavaScript 函数名</li>
-<li><code>params</code>: 传递给 JavaScript 函数的参数数组。</li>
+<li>  <code>id</code>: Web 容器构建在一个名为  <a target="_blank" rel="noopener" href="https://jasonette.com/agent/">Agent</a> 的底层架构之上。通常，一个视图可以有多个 Agent，每个 Agent 都有其唯一的ID。但是 <a target="_blank" rel="noopener" href="https://docs.jasonette.com/web/#1-background-web-container-is-an-agent"> Web 容器是一种特殊的 Agent，他只能使用<code>$webcontainer</code>作为 ID</a>, 因此我们在这里使用这个 ID。</li>
+<li>  <code>method</code>: 要调用的 JavaScript 函数名</li>
+<li>  <code>params</code>: 传递给 JavaScript 函数的参数数组。</li>
 </ul>
 <p>完整的标记如下所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      &quot;actions&quot;: &#123;        &quot;$load&quot;: &#123;          &quot;type&quot;: &quot;$agent.request&quot;,          &quot;options&quot;: &#123;            &quot;id&quot;: &quot;$webcontainer&quot;,            &quot;method&quot;: &quot;login&quot;,            &quot;params&quot;: [&quot;alice&quot;, &quot;1234&quot;]          &#125;        &#125;      &#125;    &#125;,    &quot;body&quot;: &#123;      &quot;header&quot;: &#123;        &quot;title&quot;: &quot;Web Container 2.0&quot;      &#125;,      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;url&quot;: &quot;file://index.html&quot;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      &quot;actions&quot;: &#123;        &quot;$load&quot;: &#123;          &quot;type&quot;: &quot;$agent.request&quot;,          &quot;options&quot;: &#123;            &quot;id&quot;: &quot;$webcontainer&quot;,            &quot;method&quot;: &quot;login&quot;,            &quot;params&quot;: [&quot;alice&quot;, &quot;1234&quot;]          &#125;        &#125;      &#125;    &#125;,    &quot;body&quot;: &#123;      &quot;header&quot;: &#123;        &quot;title&quot;: &quot;Web Container 2.0&quot;      &#125;,      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;url&quot;: &quot;file:&#x2F;&#x2F;index.html&quot;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>此标记表示：</p>
 <p>当视图加载 (<code>[$jason.head.actions.$load][14]</code>)时，向 Web 容器 Agent(<code>[$agent.request][15]</code>) 发送 JSON-RPC 请求，该请求在<code>options</code>下被指定。</p>
@@ -301,95 +302,95 @@
 <p>它将会查找一个名为<code>login</code>的 JavaScript 函数，并传递<code>params</code>下的两个参数（<code>&quot;alice&quot;</code>和<code>&quot;1234&quot;</code>）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">login(&quot;alice&quot;, &quot;1234&quot;)</span><br></pre></td></tr></table></figure>
 
-<p>我只解释了父应用如何触发子 Web 容器的 JavaScript 函数调用，你也可以反其道而行之，<a href="https://docs.jasonette.com/agents/#3-agenttrigger" target="_blank" rel="noopener">让 Web 容器触发父应用的原生 API</a>。</p>
-<p>详情请参阅 <a href="https://docs.jasonette.com/agents/" target="_blank" rel="noopener">Agent 文档</a>。</p>
+<p>我只解释了父应用如何触发子 Web 容器的 JavaScript 函数调用，你也可以反其道而行之，<a target="_blank" rel="noopener" href="https://docs.jasonette.com/agents/#3-agenttrigger">让 Web 容器触发父应用的原生 API</a>。</p>
+<p>详情请参阅 <a target="_blank" rel="noopener" href="https://docs.jasonette.com/agents/">Agent 文档</a>。</p>
 <h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><p>让我们回到前面简单分享的二维码示例：</p>
-<p><img src="https://cdn-media-1.freecodecamp.org/images/q5-enhI0kpKTs6F33sgyI0mS9sLqOXnHFeHI" alt></p>
+<p><img src="https://cdn-media-1.freecodecamp.org/images/q5-enhI0kpKTs6F33sgyI0mS9sLqOXnHFeHI"></p>
 <ol>
-<li>其中 <a href="https://docs.jasonette.com/document/#input" target="_blank" rel="noopener">底部的输入组件是100%原生的</a>。</li>
-<li>二维码是由 <a href="https://github.com/Jasonette/Jasonpedia/blob/gh-pages/webcontainer/agent/fn/agent.html" target="_blank" rel="noopener">作为 Web 应用</a>的 Web 容器产生的。</li>
-<li>当用户输入某些内容，并按 “Generate” 时，它将调用 Web 容器 Agent 的<code>$agent.request</code>操作，并进一步调用  <a href="https://github.com/Jasonette/Jasonpedia/blob/gh-pages/webcontainer/agent/fn/agent.html#L22" target="_blank" rel="noopener">JavaScript 函数 “qr”</a>。</li>
+<li> 其中 <a target="_blank" rel="noopener" href="https://docs.jasonette.com/document/#input">底部的输入组件是100%原生的</a>。</li>
+<li> 二维码是由 <a target="_blank" rel="noopener" href="https://github.com/Jasonette/Jasonpedia/blob/gh-pages/webcontainer/agent/fn/agent.html">作为 Web 应用</a>的 Web 容器产生的。</li>
+<li>当用户输入某些内容，并按 “Generate” 时，它将调用 Web 容器 Agent 的<code>$agent.request</code>操作，并进一步调用  <a target="_blank" rel="noopener" href="https://github.com/Jasonette/Jasonpedia/blob/gh-pages/webcontainer/agent/fn/agent.html#L22">JavaScript 函数 “qr”</a>。</li>
 </ol>
-<p>你可以在<a href="https://github.com/Jasonette/Jasonpedia/blob/gh-pages/webcontainer/agent/fn/index.json" target="_blank" rel="noopener">这里</a>参阅示例。 </p>
+<p>你可以在<a target="_blank" rel="noopener" href="https://github.com/Jasonette/Jasonpedia/blob/gh-pages/webcontainer/agent/fn/index.json">这里</a>参阅示例。 </p>
 <h4 id="3-脚本注入"><a href="#3-脚本注入" class="headerlink" title="3. 脚本注入"></a><strong>3. 脚本注入</strong></h4><h4 id="问题-2"><a href="#问题-2" class="headerlink" title="问题"></a>问题</h4><p>有时候，你可能想在 Web 容器加载完初始 HTML 后，将 JavaScript 代码动态地注入到其中。</p>
 <p>假设你要构建一个自定义的 Web 浏览器应用程序。你可能想将自己的自定义 JavaScript 注入到每个 Web 视图中以自定义 Web 视图的行为，这有点像 Web 浏览器的扩展。</p>
 <p>就算你不想构建 Web 浏览器，在想对那些内容无法控制的 URL 实现自定义行为时，你也需要使用脚本注入方法。在原生应用程序和 Web 容器之间实现通信的唯一方法就是通过 <code>$agent</code>API。但若你无法更改 HTML 内容，则只能通过动态注入的方式将<code>$agent</code>接口添加到 Web 容器中。 </p>
 <h4 id="解决方法-2"><a href="#解决方法-2" class="headerlink" title="解决方法"></a>解决方法</h4><p>就像上文提到的，<code>$jason.body.background</code>Web 容器也是一个<code>agent</code>。这意味着你可以使用与普通 Agent 相同的<code>[$agent.inject][23]</code>方法。</p>
-<p><img src="https://cdn-media-1.freecodecamp.org/images/kt6qG0I8AgcTy270pNSHCE2QfZpdRRMg8SZU" alt></p>
+<p><img src="https://cdn-media-1.freecodecamp.org/images/kt6qG0I8AgcTy270pNSHCE2QfZpdRRMg8SZU"></p>
 <h4 id="4-URL-点击处理"><a href="#4-URL-点击处理" class="headerlink" title="4. URL 点击处理"></a><strong>4. URL 点击处理</strong></h4><p>在过去，Web 容器处理链接点击只有两种方法：</p>
 <ol>
-<li><strong>只读：</strong> 将 Web 容器视为只读，并忽略触摸或滚动等所有事件。这样所有 Web 容器都是只读的，除非你让它表现得像常规浏览器一样，正如下文所述。</li>
-<li><strong>常规浏览器行为：</strong>  像普通浏览器一样，让用户与页面交互。这需要将<code>“type”：“$default”</code>设置为 <code>“action”</code>属性来进行声明。</li>
+<li> <strong>只读：</strong> 将 Web 容器视为只读，并忽略触摸或滚动等所有事件。这样所有 Web 容器都是只读的，除非你让它表现得像常规浏览器一样，正如下文所述。</li>
+<li> <strong>常规浏览器行为：</strong>  像普通浏览器一样，让用户与页面交互。这需要将<code>“type”：“$default”</code>设置为 <code>“action”</code>属性来进行声明。</li>
 </ol>
 <h4 id="问题-3"><a href="#问题-3" class="headerlink" title="问题"></a>问题</h4><p>二者都是  <strong>“孤注一掷” 的方案</strong>。</p>
 <ul>
-<li>在 “只读”情况下，Web 容器将忽略你所有的交互。 </li>
-<li>在 “常规浏览器行为” 的情况下，Web 容器表现得像浏览器一样。当你点击一个链接，它会像网页一样将链接内容通过刷新页面展示给你。 你无法劫持该链接并调用原生 API。</li>
+<li>  在 “只读”情况下，Web 容器将忽略你所有的交互。 </li>
+<li>  在 “常规浏览器行为” 的情况下，Web 容器表现得像浏览器一样。当你点击一个链接，它会像网页一样将链接内容通过刷新页面展示给你。 你无法劫持该链接并调用原生 API。</li>
 </ul>
 <h4 id="解决方法-3"><a href="#解决方法-3" class="headerlink" title="解决方法"></a>解决方法</h4><p>使用新的 Web 容器，你可以将任何<code>action</code>附加到<code>$jason.body.background</code>Web 容器以处理点击事件。</p>
-<p><img src="https://cdn-media-1.freecodecamp.org/images/FhoDSEv8qQ4ZISs6syta2eU80WYBeQmFRAAS" alt></p>
+<p><img src="https://cdn-media-1.freecodecamp.org/images/FhoDSEv8qQ4ZISs6syta2eU80WYBeQmFRAAS"></p>
 <p>让我们看看这个例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      &quot;actions&quot;: &#123;        &quot;displayBanner&quot;: &#123;          &quot;type&quot;: &quot;$util.banner&quot;,          &quot;options&quot;: &#123;            &quot;title&quot;: &quot;Clicked&quot;,            &quot;description&quot;: &quot;Link &#123;&#123;$jason.url&#125;&#125; clicked!&quot;          &#125;        &#125;      &#125;    &#125;,    &quot;body&quot;: &#123;      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;url&quot;: &quot;file://index.html&quot;,        &quot;action&quot;: &#123;          &quot;trigger&quot;: &quot;displayBanner&quot;        &#125;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      &quot;actions&quot;: &#123;        &quot;displayBanner&quot;: &#123;          &quot;type&quot;: &quot;$util.banner&quot;,          &quot;options&quot;: &#123;            &quot;title&quot;: &quot;Clicked&quot;,            &quot;description&quot;: &quot;Link &#123;&#123;$jason.url&#125;&#125; clicked!&quot;          &#125;        &#125;      &#125;    &#125;,    &quot;body&quot;: &#123;      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;url&quot;: &quot;file:&#x2F;&#x2F;index.html&quot;,        &quot;action&quot;: &#123;          &quot;trigger&quot;: &quot;displayBanner&quot;        &#125;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在这里我们将<code>&quot;trigger&quot;: &quot;displayBanner&quot;</code>附加到了 Web 容器。这意味着当用户点击 Web 容器中的任何链接时，会触发<code>displayBanner</code>操作，而不是让 Web 视图处理它。</p>
 <p>此外，若你查看<code>displayBanner</code>操作，你会发现<code>$jason</code>变量。在本例中，点击的链接将通过<code>$jason</code>变量传递。例如，如果你点击一个名为<code>&quot;https://google.com&quot;</code>的 URL，<code>$jason</code>将获得下列值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;url&quot;: &quot;https://google.com&quot;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;url&quot;: &quot;https:&#x2F;&#x2F;google.com&quot;&#125;</span><br></pre></td></tr></table></figure>
 
-<p>这意味着你可以通过<a href="https://docs.jasonette.com/web/#b-intercept-url-visits" target="_blank" rel="noopener">检查<code>$jason.url</code>值</a>来有选择地触发不同的操作。</p>
+<p>这意味着你可以通过<a target="_blank" rel="noopener" href="https://docs.jasonette.com/web/#b-intercept-url-visits">检查<code>$jason.url</code>值</a>来有选择地触发不同的操作。</p>
 <p>让我们再举一个实现自定义 Web 浏览器的例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      &quot;actions&quot;: &#123;        &quot;handleLink&quot;: [&#123;          &quot;&#123;&#123;#if $jason.url.indexOf(&apos;signin&apos;) !== -1 &#125;&#125;&quot;: &#123;            &quot;type&quot;: &quot;$href&quot;,            &quot;options&quot;: &#123;              &quot;url&quot;: &quot;file://key.html&quot;            &#125;          &#125;        &#125;, &#123;          &quot;&#123;&#123;#else&#125;&#125;&quot;: &#123;            &quot;type&quot;: &quot;$default&quot;          &#125;        &#125;]      &#125;    &#125;,    &quot;body&quot;: &#123;      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;url&quot;: &quot;file://index.html&quot;,        &quot;action&quot;: &#123;          &quot;trigger&quot;: &quot;handleLink&quot;        &#125;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  &quot;$jason&quot;: &#123;    &quot;head&quot;: &#123;      &quot;actions&quot;: &#123;        &quot;handleLink&quot;: [&#123;          &quot;&#123;&#123;#if $jason.url.indexOf(&#39;signin&#39;) !&#x3D;&#x3D; -1 &#125;&#125;&quot;: &#123;            &quot;type&quot;: &quot;$href&quot;,            &quot;options&quot;: &#123;              &quot;url&quot;: &quot;file:&#x2F;&#x2F;key.html&quot;            &#125;          &#125;        &#125;, &#123;          &quot;&#123;&#123;#else&#125;&#125;&quot;: &#123;            &quot;type&quot;: &quot;$default&quot;          &#125;        &#125;]      &#125;    &#125;,    &quot;body&quot;: &#123;      &quot;background&quot;: &#123;        &quot;type&quot;: &quot;html&quot;,        &quot;url&quot;: &quot;file:&#x2F;&#x2F;index.html&quot;,        &quot;action&quot;: &#123;          &quot;trigger&quot;: &quot;handleLink&quot;        &#125;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>我们测试URL是否包括<code>signin</code>字符串，然后根据结果执行不同的操作。</p>
 <ol>
-<li>若包含<code>signin</code>，则会打开一个新视图并以原生方式处理本地登录。</li>
-<li>若不包含<code>signin</code>，则只会运行<code>&quot;type&quot;: &quot;$default&quot;</code>操作，就像普通浏览器一样。</li>
+<li> 若包含<code>signin</code>，则会打开一个新视图并以原生方式处理本地登录。</li>
+<li> 若不包含<code>signin</code>，则只会运行<code>&quot;type&quot;: &quot;$default&quot;</code>操作，就像普通浏览器一样。</li>
 </ol>
 <h3 id="使用示范"><a href="#使用示范" class="headerlink" title="使用示范"></a>使用示范</h3><h4 id="构建自定义-Web-浏览器"><a href="#构建自定义-Web-浏览器" class="headerlink" title="构建自定义 Web 浏览器"></a>构建自定义 Web 浏览器</h4><p>我们现今可以利用新版 Web 容器的特性来：</p>
 <ol>
-<li>通过<code>url</code>属性实现自我加载，当做一个成熟完备的浏览器</li>
-<li>根据 URL 有选择地处理链接点击操作</li>
+<li> 通过<code>url</code>属性实现自我加载，当做一个成熟完备的浏览器</li>
+<li> 根据 URL 有选择地处理链接点击操作</li>
 </ol>
 <p>我们甚至可以用十几行 JSON 代码来构建一个自定义的 Web 浏览器应用。既然我们现在可以劫持每个链接的点击，那么可以看一下<code>$jason.url</code>并根据 URL 运行任何我们想要的操作。</p>
 <p>让我们看看下面的例子：</p>
-<p><img src="https://cdn-media-1.freecodecamp.org/images/iNRAFCyHHrGptiuenltF7rK902otq27ZMmTq" alt></p>
-<p><img src="https://cdn-media-1.freecodecamp.org/images/8vFiQuuuBm-KTt8LaNS-UEldKrWOCvJlI-0k" alt></p>
+<p><img src="https://cdn-media-1.freecodecamp.org/images/iNRAFCyHHrGptiuenltF7rK902otq27ZMmTq"></p>
+<p><img src="https://cdn-media-1.freecodecamp.org/images/8vFiQuuuBm-KTt8LaNS-UEldKrWOCvJlI-0k"></p>
 <p>在左侧，我们看到点击链接的行为类似常规浏览器 （<code>&quot;type&quot;: &quot;$default&quot;</code>）。</p>
 <p>在右侧，我们看到点击链接会以原生方式转换到另一个 JASON 视图。</p>
 <p>这些都可以通过基于<code>$jason.url</code>选择性地触发不同的动作来实现。</p>
 <p><strong>步骤 1.将名为<code>visit</code>的操作附加到 Web 容器中，如下所示：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  ...  &quot;body&quot;: &#123;    &quot;background&quot;: &#123;      &quot;type&quot;: &quot;html&quot;,      &quot;url&quot;: &quot;https://news.ycombinator.com&quot;,      &quot;action&quot;: &#123;        &quot;trigger&quot;: &quot;visit&quot;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;  ...  &quot;body&quot;: &#123;    &quot;background&quot;: &#123;      &quot;type&quot;: &quot;html&quot;,      &quot;url&quot;: &quot;https:&#x2F;&#x2F;news.ycombinator.com&quot;,      &quot;action&quot;: &#123;        &quot;trigger&quot;: &quot;visit&quot;      &#125;    &#125;  &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>步骤 2.根据<code>$jason.url</code>的值运行<code>visit</code>中的相关操作</strong></p>
 <p>在以下代码中，我们将检查<code>$jason.url</code>是否与 <code>newest</code>,  <code>show</code>,  <code>ask</code>等相匹配（它们是顶部菜单选项的链接）。若匹配，我们可以通过设置<code>&quot;type&quot;: &quot;$default&quot;</code>来让 Web 容器像常规浏览器一样工作。</p>
 <p>若模式不匹配，我们将通过原生的<code>$href</code>过渡到新视图，并将点击的链接作为参数进行传递。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...&quot;actions&quot;: &#123;  &quot;visit&quot;: [    &#123;      &quot;&#123;&#123;#if /\\/(newest|show|ask)$/.test($jason.url) &#125;&#125;&quot;: &#123;        &quot;type&quot;: &quot;$default&quot;      &#125;    &#125;,    &#123;      &quot;&#123;&#123;#else&#125;&#125;&quot;: &#123;        &quot;type&quot;: &quot;$href&quot;,        &quot;options&quot;: &#123;          &quot;url&quot;: &quot;https://jasonette.github.io/Jasonpedia/webcontainer/agent/hijack.json&quot;,          &quot;preload&quot;: &#123;            &quot;background&quot;: &quot;#ffffff&quot;          &#125;,          &quot;options&quot;: &#123;            &quot;url&quot;: &quot;&#123;&#123;$jason.url&#125;&#125;&quot;          &#125;        &#125;      &#125;    &#125;  ]&#125;,</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...&quot;actions&quot;: &#123;  &quot;visit&quot;: [    &#123;      &quot;&#123;&#123;#if &#x2F;\\&#x2F;(newest|show|ask)$&#x2F;.test($jason.url) &#125;&#125;&quot;: &#123;        &quot;type&quot;: &quot;$default&quot;      &#125;    &#125;,    &#123;      &quot;&#123;&#123;#else&#125;&#125;&quot;: &#123;        &quot;type&quot;: &quot;$href&quot;,        &quot;options&quot;: &#123;          &quot;url&quot;: &quot;https:&#x2F;&#x2F;jasonette.github.io&#x2F;Jasonpedia&#x2F;webcontainer&#x2F;agent&#x2F;hijack.json&quot;,          &quot;preload&quot;: &#123;            &quot;background&quot;: &quot;#ffffff&quot;          &#125;,          &quot;options&quot;: &#123;            &quot;url&quot;: &quot;&#123;&#123;$jason.url&#125;&#125;&quot;          &#125;        &#125;      &#125;    &#125;  ]&#125;,</span><br></pre></td></tr></table></figure>
 
-<p>在  <a href="https://github.com/Jasonette/Jasonpedia/blob/gh-pages/webcontainer/agent/hijack.json" target="_blank" rel="noopener">此处</a>  查看 Web 浏览器的完整 JSON 标记（它仅有48行！）。</p>
+<p>在  <a target="_blank" rel="noopener" href="https://github.com/Jasonette/Jasonpedia/blob/gh-pages/webcontainer/agent/hijack.json">此处</a>  查看 Web 浏览器的完整 JSON 标记（它仅有48行！）。</p>
 <h4 id="即时-“混合”-应用"><a href="#即时-“混合”-应用" class="headerlink" title="即时 “混合” 应用"></a>即时 “混合” 应用</h4><p>人们谈论“混合”应用时，通常是指封装在原生应用框架内的 HTML Web 应用程序。</p>
 <p>但在此我并不是想说这个。我说的“混合”，是指真正的混合应用程序，即一个应用程序可以同时具有多个原生视图和多个基于 Web 的视图。与此同时，一个视图可以具有多个原生 UI 组件以及一个以相同的原生布局渲染的 Web 容器。</p>
 <p><strong>基于 Web 的视图与原生视图之间的交互应是无缝的，你根本无法区分起始。</strong></p>
-<p><img src="https://cdn-media-1.freecodecamp.org/images/KVknGIXFeBzMxUsY1pBCddiWdEub8Jl26i0g" alt></p>
-<p>在此例中，我创建了一个应用，它将 <a href="https://www.jasonbase.com/" target="_blank" rel="noopener">jasonbase.com</a> 显示在 Web 容器中作为主视图。</p>
+<p><img src="https://cdn-media-1.freecodecamp.org/images/KVknGIXFeBzMxUsY1pBCddiWdEub8Jl26i0g"></p>
+<p>在此例中，我创建了一个应用，它将 <a target="_blank" rel="noopener" href="https://www.jasonbase.com/">jasonbase.com</a> 显示在 Web 容器中作为主视图。</p>
 <p>Jasonbase 是我开发的一项免费 JSON 托管服务，旨在让你轻松托管 Jasonette 应用程序的 JSON 标记。</p>
-<p>当然，它只是一个网站，但我已将其嵌入 Jasonette 中，所以当你点击链接时，它不会打开一个网页，而是会通过原生的<code>$ href”</code>过渡至原生的 JASON 视图。</p>
+<p>当然，它只是一个网站，但我已将其嵌入 Jasonette 中，所以当你点击链接时，它不会打开一个网页，而是会通过原生的<code> $ href”</code>过渡至原生的 JASON 视图。</p>
 <p><strong>我完全无需触及 Jasonbase.com 的代码就可以构建此应用。</strong></p>
 <p><strong>我只是将网站作为 Web 容器嵌入 Jasonette 中，并劫持了链接点击以实现本地处理，因此它可以执行诸如触发原生 API 和进行原生转换等所有原生操作。</strong></p>
-<p>你可以在<a href="https://github.com/Jasonette/Jasonpedia/blob/gh-pages/webcontainer/agent/hybrid.json" target="_blank" rel="noopener">此处</a>查看代码。</p>
+<p>你可以在<a target="_blank" rel="noopener" href="https://github.com/Jasonette/Jasonpedia/blob/gh-pages/webcontainer/agent/hybrid.json">此处</a>查看代码。</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在我看来， <strong>一切都在框架级别得以应对</strong>，这使得我们的工作非常出色。所有困难的工作都是在后台完成的。</p>
 <p>不必给应用开发者施加重负，以从零开始实现以下的一切：</p>
 <ul>
-<li>将 Web 视图嵌入原生布局</li>
-<li>创建 JavaScript 桥，以便应用程序可以在 Web 视图中进行函数调用</li>
-<li>创建原生事件处理架构，以便 Web 视图可以在父应用中触发原生事件</li>
+<li>  将 Web 视图嵌入原生布局</li>
+<li>  创建 JavaScript 桥，以便应用程序可以在 Web 视图中进行函数调用</li>
+<li>  创建原生事件处理架构，以便 Web 视图可以在父应用中触发原生事件</li>
 </ul>
 <p>解决方案是创建一个包含以下内容的抽象：</p>
 <ol>
-<li><strong>声明式标记语言：</strong> 用于描述如何将 Web 视图嵌入原生应用</li>
-<li><strong>通信协议 (JSON-RPC)：</strong> 用于应用与子 Web 视图间进行简单交互。</li>
+<li> <strong>声明式标记语言：</strong> 用于描述如何将 Web 视图嵌入原生应用</li>
+<li> <strong>通信协议 (JSON-RPC)：</strong> 用于应用与子 Web 视图间进行简单交互。</li>
 </ol>
 <p>我并不是说这就是解决所有问题的最终方案，但这对于我自己的用例而言是很出色的。</p>
 <p>我尝试使用非常前沿的技术来构建应用程序，但该技术还没有稳定可靠的移动端实现（由于协议的本质，目前尚不清楚是否会有移动端的实现）。幸运的是，它具有 JavaScript 实现，因此我可以轻松地将其集成到应用程序中。</p>
-<p>总而言之，这很棒且我对其感到满意。<a href="https://docs.jasonette.com/web/" target="_blank" rel="noopener">文档是最新版的</a> 包含了所有新特性，欢迎你随时进行探索和体验。</p>
+<p>总而言之，这很棒且我对其感到满意。<a target="_blank" rel="noopener" href="https://docs.jasonette.com/web/">文档是最新版的</a> 包含了所有新特性，欢迎你随时进行探索和体验。</p>
 <blockquote>
 <p>免责声明：能力越大，责任越大</p>
 </blockquote>
@@ -414,19 +415,19 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://www.lianzhuotao.com/2019/10/06/【译文】用7行JSON代码将你的网页变成移动应用/">http://www.lianzhuotao.com/2019/10/06/【译文】用7行JSON代码将你的网页变成移动应用/</a></span>
+                        <span><a href="http://www.lianzhuotao.com/2019/10/06/%E3%80%90%E8%AF%91%E6%96%87%E3%80%91%E7%94%A87%E8%A1%8CJSON%E4%BB%A3%E7%A0%81%E5%B0%86%E4%BD%A0%E7%9A%84%E7%BD%91%E9%A1%B5%E5%8F%98%E6%88%90%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/">http://www.lianzhuotao.com/2019/10/06/%E3%80%90%E8%AF%91%E6%96%87%E3%80%91%E7%94%A87%E8%A1%8CJSON%E4%BB%A3%E7%A0%81%E5%B0%86%E4%BD%A0%E7%9A%84%E7%BD%91%E9%A1%B5%E5%8F%98%E6%88%90%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/</a></span>
                     </p>
                 
                 
                     <p class="copyright-item">
                         <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
                     </p>
                 
                 
                      <p class="copyright-item">
                          <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY<strong>?</strong></strong></span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</span>
                      </p>
                 
 
@@ -438,7 +439,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/Web-前端/"># Web 前端</a>
+                        <a href="/tags/Web-%E5%89%8D%E7%AB%AF/"># Web 前端</a>
                     
                         
                 </span>
@@ -451,16 +452,16 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2019/10/27/解决Hexo每次部署后域名被替换（即使添加了CNAME）的问题/">解决 Hexo 部署 Github Pages 自定义域名失效的问题(即使已添加 CNAME）</a>
+                <a class="prev" rel="prev" href="/2019/10/27/%E8%A7%A3%E5%86%B3Hexo%E6%AF%8F%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%90%8E%E5%9F%9F%E5%90%8D%E8%A2%AB%E6%9B%BF%E6%8D%A2%EF%BC%88%E5%8D%B3%E4%BD%BF%E6%B7%BB%E5%8A%A0%E4%BA%86CNAME%EF%BC%89%E7%9A%84%E9%97%AE%E9%A2%98/">解决 Hexo 部署 Github Pages 自定义域名失效的问题(即使已添加 CNAME）</a>
             
             
-            <a class="next" rel="next" href="/2019/10/05/Web 图片引用之相对路径与绝度路径/">Web 图片引用之相对路径与绝对路径</a>
+            <a class="next" rel="next" href="/2019/10/05/Web%20%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8%E4%B9%8B%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E4%B8%8E%E7%BB%9D%E5%BA%A6%E8%B7%AF%E5%BE%84/">Web 图片引用之相对路径与绝对路径</a>
             
         </section>
 
         
   
-    <br>
+    <br />
     <section id="comments" class="comments">
       <style>
         .comments{margin:30px;padding:10px;background:#fff}

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang>
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="">
+<head>
     <meta charset="UTF-8">
-<meta name="baidu-site-verification" content="9VaSvcOcKP">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="baidu-site-verification" content="9VaSvcOcKP" />
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <meta name="author" content="连卓涛">
@@ -47,7 +48,7 @@
     
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 <body>
     <div class="wrapper">
         <header>
@@ -190,13 +191,13 @@
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Web-前端/">Web 前端</a>
+                                <a href="/categories/Web-%E5%89%8D%E7%AB%AF/">Web 前端</a>
                             
                         </span>
                     
                     <span id="busuanzi_container_page_pv">
-    &nbsp&nbsp&nbsp&nbsp<本文总阅读量<span id="busuanzi_value_page_pv"></本文总阅读量<span></span>次>
-
+    &nbsp&nbsp&nbsp&nbsp<本文总阅读量<span id="busuanzi_value_page_pv"></span>次>
+</span>
                 </div>
             
         </header>
@@ -205,14 +206,14 @@
             <p>相对路径与绝对路径，在 Web 开发中我们会经常遇到，本文将尽可能详细的讲解相对路径与绝对路径的区别，并举例说明。</p>
 <hr>
 <h2 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h2><ol>
-<li><strong>相对路径（Relative Path）：</strong> 相对路径就是指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。也就是指相对于当前位置的路径。</li>
+<li> <strong>相对路径（Relative Path）：</strong> 相对路径就是指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。也就是指相对于当前位置的路径。</li>
 <li><strong>绝对路径（Absolute Path）：</strong> 绝对路径是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。HTML绝对路径指带域名的文件的完整路径。</li>
 <li><strong>区分：</strong> 假如你不知道当前路径，仍能根据路径找到文件，就是绝对路径，反之则是相对路径。相对路径当整加粗样式体移动时（文件中各部分相对位置不变），仍然有效，而绝对路径移动后就失效了。</li>
 </ol>
 <h2 id="二、使用方法"><a href="#二、使用方法" class="headerlink" title="二、使用方法"></a>二、使用方法</h2><ol>
 <li><p><strong>相对路径使用：</strong></p>
 <ol>
-<li><p><strong>当前目录：</strong><br>当前目录的用 <code>./</code> 来表示。<br>举例说明：</p>
+<li><p><strong>当前目录：</strong><br>当前目录的用 <code>./ </code> 来表示。<br>举例说明：</p>
 <ul>
 <li>路径：<br>这里我们在index.html中引用图片1.png ，此时它们在同一个文件夹test1中。<img src="https://img-blog.csdnimg.cn/20191106143138992.png" alt=" 这里我们在index.html中引用图片1.png "></li>
 <li>代码：<code>&lt;img src=&quot;./1.png&quot;/&gt;</code> 路径是 ./1.png。 注意，当前目录可以省略开头的./，即写成<code>&lt;img src=&quot;1.png&quot;/&gt;</code>，也是可以的。</li>
@@ -226,16 +227,16 @@
 <li>代码：<code>&lt;img src=&quot;../1.png&quot;/&gt;</code>路径是../1.png。</li>
 <li>效果：同上。</li>
 </ul>
-<br>
+<br/>
 </li>
 <li><p><strong>下级目录：</strong></p>
 <p>下级目录直接写。<br>举例说明：</p>
 <ul>
-<li>路径：<br>如图，我们要引用的图片在目录test1中。<img src="https://img-blog.csdnimg.cn/20191106145217461.png" alt="!\["></li>
+<li>路径：<br>如图，我们要引用的图片在目录test1中。<img src="https://img-blog.csdnimg.cn/20191106145217461.png" alt="!["></li>
 <li>代码：<code>&lt;img src=&quot;test1/1.png&quot;/&gt;</code>路径是test1/1.png。</li>
 <li>效果：同上。</li>
 </ul>
-<br>
+<br/>
 
 
 </li>
@@ -248,15 +249,15 @@
 <h2 id="三、区别"><a href="#三、区别" class="headerlink" title="三、区别"></a>三、区别</h2><ol>
 <li>绝对路径<br><strong>优点：</strong> 若你使用绝对路径，如果有人抄袭你的网站内容，里面的链接还会指向你的网站，如果有人将你的网页保存到本地电脑中，里面的链接、图片、css、以及js仍然会连接到你的网站。并且如即使网页位置改变，里面的链接还是指向正确的URL。<br><strong>缺点：</strong> 内容页面比较固定，修改一个绝对地址就改变一个，其他路径不会发生变化，工作效率上比相对路径要差。在本机制作的时候不能使用绝对路径，因为链接应该指向真正的域名而不是测试机的。</li>
 <li>相对路径<br><strong>优点：</strong> 内容移动方便，可以整个目录移动。方便进行本机测试。节省代码，减少网页体积。<br><strong>缺点：</strong> 页面位置发生变化时，就会出现大量的死链，链接很容易失效。</li>
-<li>总之，一般来说，网页使用相对路径比较不容易出错。<br><a href="http://www.lvyestudy.com/les_hj/hj_7.2.aspx" target="_blank" rel="noopener">当我们使用绝对路径时，往往编辑器都不能把图片的路径解析出来，因此图片无法在网页中显示出来。在真正的网站开发中，对于图片或者引用文件的路径，我们100%都是使用相对路径的。因此，大家不必纠结绝对路径问题，只需要掌握相对路径的写法即可。[1]</a></li>
+<li>总之，一般来说，网页使用相对路径比较不容易出错。<br><a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_hj/hj_7.2.aspx">当我们使用绝对路径时，往往编辑器都不能把图片的路径解析出来，因此图片无法在网页中显示出来。在真正的网站开发中，对于图片或者引用文件的路径，我们100%都是使用相对路径的。因此，大家不必纠结绝对路径问题，只需要掌握相对路径的写法即可。[1]</a></li>
 </ol>
-<br>
+<br />
 
 <hr>
-<p>参考：<br>[1]:<a href="http://www.lvyestudy.com/les_hj/hj_7.2.aspx" target="_blank" rel="noopener">http://www.lvyestudy.com/les_hj/hj_7.2.aspx</a><br>[2]:<a href="https://baijiahao.baidu.com/s?id=1600321393073248706&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">https://baijiahao.baidu.com/s?id=1600321393073248706&amp;wfr=spider&amp;for=pc</a><br>[3]:<a href="https://www.jianshu.com/p/c557a7ccc409" target="_blank" rel="noopener">https://www.jianshu.com/p/c557a7ccc409</a></p>
+<p>参考：<br>[1]:<a target="_blank" rel="noopener" href="http://www.lvyestudy.com/les_hj/hj_7.2.aspx">http://www.lvyestudy.com/les_hj/hj_7.2.aspx</a><br>[2]:<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1600321393073248706&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1600321393073248706&amp;wfr=spider&amp;for=pc</a><br>[3]:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c557a7ccc409">https://www.jianshu.com/p/c557a7ccc409</a></p>
 <p><strong>写在最后：</strong></p>
 <p>以上是我的学习记录，希望能给像我一样的新人一点帮助！</p>
-<p>这是<a href="mailto:lianzhuotao@sina.com" target="_blank" rel="noopener">我的邮箱</a>，欢迎交流学习。</p>
+<p>这是<a href="mailto:lianzhuotao@sina.com">我的邮箱</a>，欢迎交流学习。</p>
 
         </div>
 
@@ -271,19 +272,19 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://www.lianzhuotao.com/2019/10/05/Web 图片引用之相对路径与绝度路径/">http://www.lianzhuotao.com/2019/10/05/Web 图片引用之相对路径与绝度路径/</a></span>
+                        <span><a href="http://www.lianzhuotao.com/2019/10/05/Web%20%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8%E4%B9%8B%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E4%B8%8E%E7%BB%9D%E5%BA%A6%E8%B7%AF%E5%BE%84/">http://www.lianzhuotao.com/2019/10/05/Web%20%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8%E4%B9%8B%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E4%B8%8E%E7%BB%9D%E5%BA%A6%E8%B7%AF%E5%BE%84/</a></span>
                     </p>
                 
                 
                     <p class="copyright-item">
                         <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
                     </p>
                 
                 
                      <p class="copyright-item">
                          <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY<strong>?</strong></strong></span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</span>
                      </p>
                 
 
@@ -295,7 +296,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/Web-前端/"># Web 前端</a>
+                        <a href="/tags/Web-%E5%89%8D%E7%AB%AF/"># Web 前端</a>
                     
                         
                 </span>
@@ -308,14 +309,14 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2019/10/06/【译文】用7行JSON代码将你的网页变成移动应用/">【译文】用7行 JSON 代码将你的网页变成移动应用</a>
+                <a class="prev" rel="prev" href="/2019/10/06/%E3%80%90%E8%AF%91%E6%96%87%E3%80%91%E7%94%A87%E8%A1%8CJSON%E4%BB%A3%E7%A0%81%E5%B0%86%E4%BD%A0%E7%9A%84%E7%BD%91%E9%A1%B5%E5%8F%98%E6%88%90%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/">【译文】用7行 JSON 代码将你的网页变成移动应用</a>
             
             
         </section>
 
         
   
-    <br>
+    <br />
     <section id="comments" class="comments">
       <style>
         .comments{margin:30px;padding:10px;background:#fff}
